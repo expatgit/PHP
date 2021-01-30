@@ -23,7 +23,8 @@ httponly(true / false) - доступна для js или нет
 */
 // получить данные cookie, которые прислал клиент $_COOKIE
 
-
+setcookie('key', 'name');
+var_dump($_COOKIE);
 
 
 $color = 'blue';
