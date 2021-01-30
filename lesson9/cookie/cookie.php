@@ -15,7 +15,7 @@ path - путь к каталогу на сервере, для которого
 domain - домен, для которого доступны куки
 secure (true / false) - куки может передаваться только по https
 httponly(true / false) - доступна для js или нет
-начиная с php 7.3 samesite ('None', 'Lax', 'Strict')
+начиная с php 7.3 samesite ('None', 'Lax', 'Strict') - TODO
 
 
 
