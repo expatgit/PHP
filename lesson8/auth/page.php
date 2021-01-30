@@ -9,18 +9,12 @@
 session_start();
 $login = $_SESSION['login'];
 
+$server = $_SERVER;
 
-if($server['REQUEST_METHOD'] === 'POST') {
-    $post = $_POST; // login === qwerty | password === 123
-    if (trim($post['login']) === 'qwerty' && trim($post['password']) === '123') {
-        $_SESSION['login'] = $post['login'];
-        header('location: account.php');
-    } else {
-        $error = 'Ошибка авторизации';
-    }
+if ($server['REQUEST_METHOD'] === 'POST') {
+$post = $_POST;
+echo $post['text'];
 
-
-}
 
 ?>
 
@@ -46,27 +40,23 @@ if($server['REQUEST_METHOD'] === 'POST') {
 
 
 <!-- form: textarea input -->
-    <?php if (isset($login)): {
-            echo $post['text'];
-        }?> <?php endif; ?>
 
-<div id="section">
+<div>
     <?php if (isset($login)): ?>
-    <label for="comment">Введите комментарий</label>
-        <form id="comment" method="post">
+
+
+
+    <form>
         <textarea name="text">
 
         </textarea>
         <input type="submit" value="Добавить">
-
     </form>
     <?php endif; ?>
 </div>
-<br><br>
-<button><a href="../../" >В меню</a></button>
 
 
-<script src="js/ajax.js"></script>
+
 
 </body>
 </html>

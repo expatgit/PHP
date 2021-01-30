@@ -27,7 +27,7 @@ form.addEventListener('submit', (event) => {
         if (xhr.status === 200) {
 
             let div = document.createElement('div');
-            div.innerText = 'Я не знаю, как в свежесозданный Div закинуть введенные в textarea данные';
+            div.innerText = fd.get('comment');
             document.body.append(div);
             alert('Ответ сервера получен');
         }

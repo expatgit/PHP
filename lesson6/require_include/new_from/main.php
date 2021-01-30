@@ -48,7 +48,7 @@ var_dump($files);
 var_dump($img_names);
 
 ?>
-<!--
+--
 
 <!DOCTYPE html>
 <html lang="en">
@@ -59,21 +59,19 @@ var_dump($img_names);
 <body>
 
 
-<?php /*include_once 'C:\openserver\OpenServer\domains\PHP\lesson6\require_include/new_from/components/header.php' */?>
+<?php include_once 'C:\openserver\OpenServer\domains\PHP\lesson6\require_include/new_from/components/header.php' ?>
 
 <section>
-    <?php /*foreach ($img_names as $name){
-
-}*/?>
+    <?php foreach ($img_names as $name): ?>
 <div>
 
-    <p <?php /*echo ""*/?>> Название файла</p>
-    <img src=<?php /*$name['img']*/?>"
-    <?php /*endforeach; */?>
+    <p > Название файла: <?php echo "$tmp_name"?></p>
+    <img height="200" width="200" src="img/<?php echo $name?>">
+    <?php endforeach; ?>
 </div>
 </section>
 
 </form>
 
 </body>
--->
+-
